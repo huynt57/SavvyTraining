@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Savvycom training - Javascript 1</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+
+                setInterval(function() {
+                    var num1 = $('#num1').val();
+                    var num2 = $('#num2').val();
+                    
+                    var op = $('#op').val();
+
+                    num1 = parseInt(num1);
+                    num2 = parseInt(num2);
+
+                    var result;
+
+                    if (num1 !== '' && num2 !== '' && op === 'add')
+                    {
+                        result = num1 + num2;
+                        setTimeout(1000);
+                        $('#res').val(result).delay(1000);
+                    } else 
+                    {
+                        result = num1 - num2;
+                        setTimeout(1000);
+                        $('#res').val(result).delay(1000);
+                    }
+
+                });
+            }, 1000);
+        </script>
+    </head>
+
+    <body>
+
+        <div class="row">
+            <div class="col-lg-1">
+                <div class="input-group">
+
+                    <input type="text" class="form-control" id="num1">
+                </div><!-- /input-group -->
+
+            </div><!-- /.col-lg-6 -->
+
+
+            <div class="col-lg-1">
+                <div class="input-group">
+                    <select class="form-control" id="op">
+                        <option value="add">+</option>
+                        <option value="sub">-</option>
+                    </select>
+                </div>
+            </div><!-- /.col-lg-6 -->
+
+            <div class="col-lg-1">
+                <div class="input-group">
+
+                    <input type="text" class="form-control" id="num2">
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+            <div class="col-lg-1">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="res">
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+    </body>
+</html>
+
