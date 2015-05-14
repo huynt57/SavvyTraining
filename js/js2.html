@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Savvycom training - Javascript 1</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+
+                $('#res').click(function() {
+                    $('#result').empty();
+                    var num = $('#num').val();
+                    num = parseInt(num);
+                    var cnt = 2 * num - 1;
+                    var size = cnt * cnt;
+
+                    var k = 1, c1 = 0, c2 = cnt - 1, r1 = 0, r2 = cnt - 1;
+                    var A = new Array(10);
+                    for (var i = 0; i < cnt; i++) {
+                        A[i] = new Array(cnt);
+                    }
+
+                    while (k <= size)
+                    {
+                        for (var i = c1; i <= c2; i++)
+                        {
+                            A[r1][i] = k++;
+                        }
+
+                        for (var j = r1 + 1; j <= r2; j++)
+                        {
+                            A[j][c2] = k++;
+                        }
+
+                        for (var i = c2 - 1; i >= c1; i--)
+                        {
+                            A[r2][i] = k++;
+                        }
+
+                        for (var j = r2 - 1; j >= r1 + 1; j--)
+                        {
+                            A[j][c1] = k++;
+                        }
+
+                        c1++;
+                        c2--;
+                        r1++;
+                        r2--;
+                    }
+
+                    for (var i = 0; i < cnt; i++)
+                    {
+                        for (var j = 0; j < cnt; j++)
+                        {
+                            $('#result').append(A[i][j] + '\t');
+                        }
+                        
+                        $('#result').append("<br/>");
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+
+        <div class="row">
+            <div class="col-lg-1">
+                <div class="input-group">
+
+                    <input type="text" class="form-control" id="num">
+                    <button class="btn" id="res">Get spiral matrix</button>
+                </div><!-- /input-group -->
+
+            </div><!-- /.col-lg-6 -->
+
+
+            <div  class="col-lg-2" id="result" >
+
+
+            </div>
+        </div><!-- /.row -->
+    </body>
+</html>
+

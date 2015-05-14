@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Savvycom training - Javascript 1</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                var image_array = ["0.jpg", "1.jpg", "2.jpg"];
+                var i = -1;
+                //  for (var i = 0; i < image_array.length; i++)
+                // {
+                //     $('#result').prepend('<img src = "' + image_array[i] + '" style="width:200px;height:200px">');
+                //  }
+
+                $('#next').click(function() {
+                    if (i + 1 < 3)
+                    {
+                        $('#result').html('<img src = "' + image_array[++i] + '" style="width:200px;height:200px">');
+                        console.log(i);
+                    }
+                    else
+                    {
+                        $('#result').html('<img src = "' + image_array[0] + '" style="width:200px;height:200px">');
+                        // i = 0;
+                        console.log(i);
+                    }
+
+                });
+
+                $('#prev').click(function() {
+                    if (i - 1 >= -1)
+                    {
+                        $('#result').html('<img src = "' + image_array[i--] + '" style="width:200px;height:200px">');
+                        console.log(i);
+                    }
+                    else
+                    {
+                        $('#result').html('<img src = "' + image_array[2] + '" style="width:200px;height:200px">');
+                        //   i = 2;
+                        console.log(i);
+                    }
+                });
+
+                $('#auto').click(function() {
+                    var j = -1;
+                    setInterval(function() {
+                        
+                        if (j + 1 < 3)
+                        {
+                            $('#result').html('<img src = "' + image_array[++j] + '" style="width:200px;height:200px">');
+                            console.log(j);
+                        }
+                        else
+                        {
+                            $('#result').html('<img src = "' + image_array[0] + '" style="width:200px;height:200px">');
+                            // i = 0;
+                            console.log(j);
+                            j = -1;
+                        }
+                        
+                    }, 1000);
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+
+        <div class="row">
+            <div class="col-lg-1">
+                <div class="input-group">
+
+                    <button class="btn" id="prev">Prev</button>
+                    <button class="btn" id="next">Next</button>
+                    <button class="btn" id="auto">Auto</button>
+                </div><!-- /input-group -->
+
+            </div><!-- /.col-lg-6 -->
+
+
+            <div  class="col-lg-2" id="result" >
+
+            </div>
+        </div><!-- /.row -->
+    </body>
+</html>
+
