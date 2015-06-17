@@ -2,18 +2,21 @@
 <html lang="en">
     <head>
         <title>DOM Reading</title>
-
+        <style>
+            
+            .tab:after {
+                border: 1px solid;
+            }
+        </style>
     </head>
 
     <body>
-        <div>
-            <button id="run" onclick="getChildNode(document.documentElement, '')" style="clear: both;">Run</button>
-        </div>
-        <div id="left" style="width: 40%; float: left;">
-            <textarea style="height: 500px; width: 500px;"></textarea>
-        </div>
-        <div id="right" style="width: 50%; float: right;">
 
+        <div id="left">
+            <p></p>
+        </div>
+        <div id="right">
+            <strong></strong>
         </div>
     </body>
 
@@ -21,16 +24,15 @@
 
 
 <script type="text/javascript">
-    var one_tab = "&nbsp;&nbsp;&nbsp;";
-    // window.onload = getChildNode(document.documentElement, "");
+    var one_tab = '<span class = "tab" style = "display:inline;margin-left:15px; border-left:1px solid #999999;">&nbsp&nbsp</span>';
+    window.onload = getChildNode(document.documentElement, "");
     function getChildNode(element, tab)
     {
         if (element.tagName === undefined) {
             return;
         }
-        var str = tab + element.tagName + "<br>";
-        //  document.write(str);
-        document.getElementById('right').innerHTML = str;
+        var str = tab +  '<span style="border-bottom: 1px solid;">&nbsp&nbsp&nbsp&nbsp</span>'+element.tagName + "<br>";
+        document.write(str);
         //  document.write(tab + element.tagName + "<br>");
         if (element.childNodes)
         {
