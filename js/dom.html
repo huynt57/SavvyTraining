@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DOM Reading</title>
+
+    </head>
+
+    <body>
+        <div>
+            <button id="run" onclick="getChildNode(document.documentElement, '')" style="clear: both;">Run</button>
+        </div>
+        <div id="left" style="width: 40%; float: left;">
+            <textarea style="height: 500px; width: 500px;"></textarea>
+        </div>
+        <div id="right" style="width: 50%; float: right;">
+
+        </div>
+    </body>
+
+</html>
+
+
+<script type="text/javascript">
+    var one_tab = "&nbsp;&nbsp;&nbsp;";
+    // window.onload = getChildNode(document.documentElement, "");
+    function getChildNode(element, tab)
+    {
+        if (element.tagName === undefined) {
+            return;
+        }
+        var str = tab + element.tagName + "<br>";
+        //  document.write(str);
+        document.getElementById('right').innerHTML = str;
+        //  document.write(tab + element.tagName + "<br>");
+        if (element.childNodes)
+        {
+            var nodes = element.childNodes.length;
+            // console.log(nodes);
+            for (var i = 0; i < nodes; i++)
+            {
+                var node = element.childNodes[i];
+                getChildNode(node, tab + one_tab);
+            }
+        }
+    }
+</script>

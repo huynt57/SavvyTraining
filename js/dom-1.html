@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DOM Reading</title>
+
+    </head>
+
+    <body>
+
+        <div id="left">
+           <p></p>
+        </div>
+        <div id="right">
+			<strong></strong>
+        </div>
+    </body>
+
+</html>
+
+
+<script type="text/javascript">
+	var one_tab = "&nbsp;&nbsp;&nbsp;";
+    window.onload = getChildNode(document.documentElement,"");
+    function getChildNode(element,tab)
+    {
+		if(element.tagName==undefined){
+			return;
+		}
+		var str = tab + element.tagName + "<br>";
+        document.write(str);
+        //  document.write(tab + element.tagName + "<br>");
+        if (element.childNodes)
+        {
+            var nodes = element.childNodes.length;
+            // console.log(nodes);
+            for (var i = 0; i < nodes; i++)
+            {
+                var node = element.childNodes[i];
+				getChildNode(node,tab+one_tab);
+            }
+        }
+    }
+
+
+</script>
