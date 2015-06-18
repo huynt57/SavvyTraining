@@ -2,21 +2,21 @@
 <html lang="en">
     <head>
         <title>DOM Reading</title>
-        <style>
-            
+        <style>           
             .tab:after {
-                border: 1px solid;
+                border-right: 1px solid;
             }
         </style>
     </head>
 
     <body>
+        <button onclick="run();" style="clear: both;">Run</button>
+        <div id="left" style="width: 45%; float: left; margin-left: 150px;">
 
-        <div id="left">
-            <p></p>
+            <textarea style="height: 500px; width: 500px;" id="code"></textarea>
         </div>
-        <div id="right">
-            <strong></strong>
+        <div id="right" style="width: 45%; float: right; width: 500px; height: 500px; border: 1px solid; margin-right: 150px;">
+
         </div>
     </body>
 
@@ -24,15 +24,16 @@
 
 
 <script type="text/javascript">
-    var one_tab = '<span class = "tab" style = "display:inline;margin-left:15px; border-left:1px solid #999999;">&nbsp&nbsp</span>';
-    window.onload = getChildNode(document.documentElement, "");
+    var one_tab = '<div class = "tab" style = "display:inline-block; margin-left:15px;border-left:1px solid; ">&nbsp</div>';
+    //window.onload = getChildNode(document.documentElement, "");
     function getChildNode(element, tab)
     {
         if (element.tagName === undefined) {
             return;
         }
-        var str = tab +  '<span style="border-bottom: 1px solid;">&nbsp&nbsp&nbsp&nbsp</span>'+element.tagName + "<br>";
-        document.write(str);
+        var str = tab + '<span style="border-bottom: 1px solid;">&nbsp&nbsp&nbsp&nbsp</span>' + element.tagName + "<br>";
+        document.getElementById('right').innerHTML += str;
+        //document.write(str);
         //  document.write(tab + element.tagName + "<br>");
         if (element.childNodes)
         {
@@ -45,4 +46,15 @@
             }
         }
     }
+
+    function run()
+    {
+        document.getElementById('right').innerHTML = "";
+        var code = document.getElementById('code').value;
+        var div = document.createElement('html');
+        div.innerHTML = code;
+        getChildNode(div, '');
+    }
+
+
 </script>
