@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Responsive</title>
+        <link rel = "stylesheet" href="../css/jquery.mmenu.all.css" />
+        <link rel = "stylesheet" href="../css/demo.css" />
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+        <script type = "text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+        <script type = "text/javascript" src="../js/swipe.js"></script>
+        <script type="text/javascript" src="../js/jquery.mmenu.min.all.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('nav#menu').mmenu();
+            });
+        </script>
+
+        <script type="text/javascript">
+            var comments = [
+                {
+                    'username': 'Thea',
+                    'time': '3 minutes',
+                    'content': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet',
+                    'avatar': '../img/new/avatar (1).jpg',
+                    'url': '#'
+                },
+                {
+                    'username': 'Tommy',
+                    'time': '25 minutes',
+                    'content': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet',
+                    'avatar': '../img/new/avatar (3).jpg',
+                    'url': '#'
+                },
+                {
+                    'username': 'Sarah',
+                    'time': '55 minutes',
+                    'content': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet',
+                    'avatar': '../img/new/avatar (4).jpg',
+                    'url': '#'
+                }
+            ];
+
+        </script>
+    </head>
+
+    <body>
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About us</a>
+                    <ul>
+                        <li><a href="#about/history">History</a></li>
+                        <li><a href="#about/team">The team</a>
+                            <ul>
+                                <li><a href="#about/team/management">Management</a></li>
+                                <li><a href="#about/team/sales">Sales</a></li>
+                                <li><a href="#about/team/development">Development</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#about/address">Our address</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="page">
+            <div class="header">
+                <a href="#menu"></a>
+                Demo
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6"></div>
+                    <div class="col-xs-12 col-md-6"></div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+
+</html>

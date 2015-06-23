@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>SIMPLE TEMPLATE</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="../css/jquery.mmenu.all.css" rel="stylesheet"/>
+    <link href="../css/style.css" rel="stylesheet"/>
+</head>
+<body>
+    
+    <div id="page">
+        <div id="header">
+            <a href="#menu" class="nav_btn"><i class="fa fa-bars"></i></a>
+            <p class="tagtext">*referatruck</p>
+            <a href="#search" class="search_btn"><i class="fa fa-search"></i></a>
+        </div>
+        <div id="content" class="container">
+            <div class="row" id="home-page">
+            	<div class="col-xs-12 col-md-6">
+            		<span><strong>Photos</strong></span>
+	            	 <ul  id ="image_grid" class="image_grid reset_padding">
+	            	 </ul>
+	            	 <p><strong>Descriptions</strong></p>
+	            	  <div class="description">
+						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed dot eiusmod tempor
+						     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+						  </p>
+					 </div>
+					 <hr class="hidden-md hidden-lg"/>
+            	</div>
+	             <div class="col-xs-12 col-md-6 ">
+		             <div class="comments">
+		             	<div class="comment_add">
+			             	<div class="row">
+								<div class="col-xs-12 form-group">
+									<strong>User Reviews</strong>
+								</div>
+								<div class="col-xs-12 col-sm-10 col-md-9 form-group">
+									<img src="../img/new/avatar (2).jpg" >
+									<div id="account_choose">
+								        <a href="#"><i class="fa fa-caret-down fa-2x"></i></a>
+								    </div>
+									<div style="overflow: hidden;">
+										<textarea class="form-control" placeholder="Share your comment ..."></textarea>
+									</div>
+									<div class="clearfix"></div>
+									<p><span id="login_name" class="username">Laurel</span></p>
+								</div>
+								<div class="col-xs-12 col-sm-2 col-md-3">
+									<button  id="share_btn" class="btn btn-default btn-lg btn-block">
+										<span><i class="fa fa-share fa-fw"></i>Share</span>
+									</button>
+								</div>
+								<div class="clearfix"></div>
+								<div id ="comments_account_list" class="col-xs-12" style="display:none">
+									<p>Comment as</p>
+									<ul class="list-inline">
+								          <li><a href="#1">*ABC1</a></li>
+								          <li><a href="#2">*ABC2</a></li>
+								          <li><a href="#3">*ABC3</a></li>
+								          <li><a href="#2">*ABC2</a></li>
+								          <li><a href="#3">*ABC3</a></li>
+								          <li><a href="#2">*ABC2</a></li>
+								          <li><a href="#3">*ABC3</a></li>
+								          <li><a href="#2">*ABC2</a></li>
+								          <li><a href="#3">*ABC3</a></li>
+								          <li><a href="#3">*ABC3</a></li>
+								          <li><a href="#3">*ABC3</a></li>
+								          <li><a href="#3">*ABC3</a></li>
+								          <li><a href="#3">*ABC3</a></li>
+								          <li><a href="#3">*ABC3</a></li>
+								          <li><a href="#3">*ABC3</a></li>
+								        </ul>
+								</div>
+							</div>
+		             	</div>
+						<p><b><i>Latest comments</i></b></p>
+						<div class="comment_list">
+						</div>								
+						<button id="loadMore_btn" class="btn btn-default btn-lg col-xs-12">
+							<span><i class="fa fa-spinner fa-fw"></i>Load more comments</span>
+						</button>
+		             </div>
+				</div>
+             </div>
+             
+             <!-- video content -->
+            <div class="row inactive-content" id="video-page">
+                <ul id="video-list" class="video_grid col-xs-12"></ul>
+            </div>
+            
+            <!-- company info content -->
+            <div class="row  inactive-content" id="company-page">
+                Company info
+            </div>
+        </div>
+        
+        <nav id="menu" class="left_nav">
+            <ul>
+                <li class="nav_title"><a href="javascript:void(0)">Menu</a></li>
+                <li><a href="javascript:void(0)"><img class="biz_nav_icon" src="../img/icons/nav_home.png"/> Home</a></li>
+                <li><a href="javascript:void(0)"><img class="biz_nav_icon" src="../img/icons/nav_edit.png"/> Update info</a></li>
+                <li><a href="javascript:void(0)"><img class="biz_nav_icon" src="../img/icons/nav_company.png"/> Companies</a></li>
+                <li><a href="javascript:void(0)"><img class="biz_nav_icon" src="../img/icons/nav_feedback.png"/> How are we doing?</a></li>
+                <li><a href="javascript:void(0)"><img class="biz_nav_icon" src="../img/icons/nav_setting.png"/> Setting</a></li>
+                <li><a href="javascript:void(0)"><img class="biz_nav_icon" src="../img/icons/nav_logout.png"/> Logout</a></li>
+            </ul>
+        </nav>
+        
+        <div id="footer" class="mm-fixed-bottom">
+            <ul  class="footer_menu">
+                <li class="selected" tab_name="home"><a href="javascript:void(0)"><i class="biz_footer_home"></i></a></li>
+                <li tab_name="follow"><a href="javascript:void(0)"><i class="biz_footer_follow"></i></a></li>
+                <li tab_name="video"><a href="javascript:void(0)"><i class="biz_footer_video"></i></a></li>
+                <li tab_name="company"><a href="javascript:void(0)"><i class="biz_footer_company"></i></a></li>
+                <li tab_name="share"><a href="javascript:void(0)"><i class="biz_footer_share"></i></a></li>
+            </ul>
+            
+             <!-- Social popup -->
+            <ul id="social_links_popup" class="cus_popup"></ul>
+            
+            <!-- follow fastapp popup -->
+            <div id="follow_fastapp_popup" class="cus_popup">
+                <p class="text-center">You have followed this app!</p>
+            </div>
+            
+            <!-- full screen image slider popup -->
+            <div id="fullscreen_slider">
+            </div>
+        </div>
+        
+    </div>
+
+<script>
+var pageInfo = {
+    tagtext : '*galaxys4',
+    biz_id : '123',
+    social_links : {
+        'facebook' : 'http://google.com',
+        'twitter' : 'http://google.com',
+        'youtube' : 'http://google.com',
+        'linkedin' : 'http://google.com',
+        'yelp' : 'http://google.com',
+        'flickr' : 'http://google.com',
+        'gplus' : 'http://google.com',
+        'myspace' : 'http://google.com',
+        'blogger' : 'http://google.com',
+        'digg' : 'http://google.com',
+        'other' : 'http://google.com'
+    },
+    images: [
+             {
+                 'title' : 'Title 1',
+                 'description': 'Description 1',
+                 'source' : '../img/new/big1.jpg'
+             },
+             {
+                 'title' : 'Title 2',
+                 'description': 'Description 2',
+                 'source' : '../img/new/big2.jpg'
+             },
+             {
+                 'title' : 'Title 3',
+                 'description': 'Description 3',
+                 'source' : '../img/new/big3.jpg'
+             },
+             {
+                 'title' : 'Title4',
+                 'description': 'Description 4',
+                 'source' : '../img/new/big4.jpg'
+             },
+             {
+                 'title' : 'Title5',
+                 'description': 'Description 5',
+                 'source' : '../img/new/big4.jpg'
+             },
+             {
+                 'title' : 'Title6',
+                 'description': 'Description 6',
+                 'source' : '../img/new/big4.jpg'
+             },
+             {
+                 'title' : 'Title7',
+                 'description': 'Description 7',
+                 'source' : '../img/new/big4.jpg'
+             },
+             {
+                 'title' : 'Title8',
+                 'description': 'Description 8',
+                 'source' : '../img/new/big4.jpg'
+             },
+             {
+                 'title' : 'Title9',
+                 'description': 'Description 9',
+                 'source' : '../img/new/big4.jpg'
+             },
+        ],
+        videos: [
+                 {
+                     'title' : 'Video from Youtube',
+                     'description': 'Description 1',
+                     'source' : 'http://www.youtube.com/watch?v=nbp3Ra3Yp74'
+                 },
+                 {
+                     'title' : 'Video from Vimeo',
+                     'description': 'Description 2',
+                     'source' : 'http://vimeo.com/80317575'
+                 },
+                 {
+                     'title' : 'Video from file',
+                     'description': 'Description 3',
+                     'source' : 'http://video.thethao.vnecdn.net/video/web/mp4/2013/12/09/1322091846/arsenal-1-1-everton-ozil-cuu-thua-cho-phao-thu-1386542425.mp4'
+                 },
+                 {
+                     'title' : 'Video from you tube',
+                     'description': 'Description 4',
+                     'source' : 'http://www.youtube.com/watch?v=g3xwJ-bJdsU'
+                 },
+            ]
+};
+
+var comments= [
+               {
+                   'username': 'Thea',
+                   'time': '3 minutes',
+                   'content': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet',
+                   'avatar': '../img/new/avatar (1).jpg',
+                   'url': '#'
+               },
+               {
+                   'username': 'Tommy',
+                   'time': '25 minutes',
+                   'content': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet',
+                   'avatar': '../img/new/avatar (3).jpg',
+                   'url': '#'
+               },
+               {
+                   'username': 'Sarah',
+                   'time': '55 minutes',
+                   'content': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet',
+                   'avatar': '../img/new/avatar (4).jpg',
+                   'url': '#'
+               }
+           ];
+</script>
+
+<script src="../js/jquery-2.0.3.min.js" type="text/javascript"></script>
+<script src="../js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../js/jquery.mmenu.min.js" type="text/javascript"></script>
+<script src="../js/swipe.js" type="text/javascript"></script>
+<script src="../js/common.js" type="text/javascript"></script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+/*
+	jQuery.mmenu navbars addon CSS
+*/
+
+@import "../_inc/variables";
+
+.mm-menu > .mm-navbar
+{
+	background: inherit;
+	padding: 0;
+	z-index: 3;
+
+	//	Bugfix
+	@include mm_webkit_prefix( 'transform', translate3d( 0, 0, 0 ) );
+}
+.mm-navbar-bottom
+{
+	border-top: 1px solid transparent;
+	border-bottom: none;
+	top: auto;
+	bottom: 0;
+}
+
+.mm-navbar-top ~ .mm-navbar-top
+{
+	border-bottom: none;
+}
+.mm-navbar-bottom ~ .mm-navbar-bottom
+{
+	border-top: none;
+}
+
+.mm-navbar.mm-hasbtns
+{
+	padding: 0 $mm_btnSize;
+}
+
+
+//	Close button
+.mm-close:after
+{
+	content: 'x';
+}
+
+
+//	Buttonbars
+.mm-navbar[class*="mm-navbar-content-"]
+{
+	> *
+	{
+		display: block;
+		float: left;
+	}
+}
+
+
+@include mm_navbar_positioning( 'top', 1 );
+@include mm_navbar_positioning( 'top', 2 );
+@include mm_navbar_positioning( 'top', 3 );
+@include mm_navbar_positioning( 'top', 4 );
+
+@include mm_navbar_positioning( 'bottom', 1 );
+@include mm_navbar_positioning( 'bottom', 2 );
+@include mm_navbar_positioning( 'bottom', 3 );
+@include mm_navbar_positioning( 'bottom', 4 );
+
+@include mm_navbar_sizing( 2 );
+@include mm_navbar_sizing( 3 );
+@include mm_navbar_sizing( 4 );
+
+@include mm_navbar_content( 2 );
+@include mm_navbar_content( 3 );
+@include mm_navbar_content( 4 );
+@include mm_navbar_content( 5 );
+@include mm_navbar_content( 6 );

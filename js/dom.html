@@ -24,36 +24,44 @@
 
 
 <script type="text/javascript">
-    var one_tab = '<div class = "tab" style = "display:inline-block; margin-left:15px;border-left:1px solid; ">&nbsp</div>';
-    //window.onload = getChildNode(document.documentElement, "");
-    function getChildNode(element, tab)
+    function getChildNode(element)
     {
         if (element.tagName === undefined) {
-            return;
+            return "";
         }
-        var str = tab + '<span style="border-bottom: 1px solid;">&nbsp&nbsp&nbsp&nbsp</span>' + element.tagName + "<br>";
-        document.getElementById('right').innerHTML += str;
+        var str = "";
+        //  if(isRoot)
+        // str += "<ul>";
+        // str = '<div style = "margin-left: 5px;" class = "parent">';
+        str += '<div style = "margin-left: 15px; border-left: 1px solid; border-bottom: 1px solid; width: 15px; padding-right:3px">' + '<div style = "margin-left: 10px;">' + element.tagName + '</div>' + '</div>';
         //document.write(str);
         //  document.write(tab + element.tagName + "<br>");
         if (element.childNodes)
         {
+            str += '<div class = "parent" style = "margin-left: 18px;">';
             var nodes = element.childNodes.length;
             // console.log(nodes);
             for (var i = 0; i < nodes; i++)
             {
                 var node = element.childNodes[i];
-                getChildNode(node, tab + one_tab);
+                str += getChildNode(node);
             }
+            str += "</div>";
         }
+        // str += "</div>";
+        // if(isRoot)
+        // str += "</ul>";
+        return str;
     }
 
     function run()
     {
-        document.getElementById('right').innerHTML = "";
         var code = document.getElementById('code').value;
-        var div = document.createElement('html');
+        var div = document.createElement('div');
         div.innerHTML = code;
-        getChildNode(div, '');
+        var str = getChildNode(div);
+        document.getElementById('right').innerHTML = str;
+        // alert(str);
     }
 
 
