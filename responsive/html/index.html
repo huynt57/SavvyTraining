@@ -2,16 +2,22 @@
 <html lang="en">
     <head>
         <title>Responsive</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
         <link rel = "stylesheet" href="../css/jquery.mmenu.all.css" />
         <link rel = "stylesheet" href="../css/demo.css" />
+        <link rel = "stylesheet" href="../css/style.css" />
+
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
 
 
         <script type = "text/javascript" src="../js/jquery-1.11.3.min.js"></script>
         <script type = "text/javascript" src="../js/swipe.js"></script>
         <script type="text/javascript" src="../js/jquery.mmenu.min.all.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script type = "text/javascript" src="../js/custom.js"></script> 
 
         <script type="text/javascript">
             $(document).ready(function() {
@@ -20,29 +26,7 @@
         </script>
 
         <script type="text/javascript">
-            var comments = [
-                {
-                    'username': 'Thea',
-                    'time': '3 minutes',
-                    'content': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet',
-                    'avatar': '../img/new/avatar (1).jpg',
-                    'url': '#'
-                },
-                {
-                    'username': 'Tommy',
-                    'time': '25 minutes',
-                    'content': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet',
-                    'avatar': '../img/new/avatar (3).jpg',
-                    'url': '#'
-                },
-                {
-                    'username': 'Sarah',
-                    'time': '55 minutes',
-                    'content': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet',
-                    'avatar': '../img/new/avatar (4).jpg',
-                    'url': '#'
-                }
-            ];
+
 
         </script>
     </head>
@@ -72,14 +56,206 @@
                 <a href="#menu"></a>
                 Demo
             </div>
-            <div class="container">
+            <div class="container" id="content">
                 <div class="row">
-                    <div class="col-xs-12 col-md-6"></div>
-                    <div class="col-xs-12 col-md-6"></div>
+                    <div class="col-xs-12 col-md-6">
+                        <span>
+                            <strong>Photos</strong>
+                        </span>
+                        <ul id="list_image" class="list-inline">
+                            <li>
+                                <a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=128%C3%9790&w=125&h=90" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=128%C3%9790&w=125&h=90" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=128%C3%9790&w=125&h=90" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=128%C3%9790&w=125&h=90" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=128%C3%9790&w=125&h=90" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=128%C3%9790&w=125&h=90" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=128%C3%9790&w=125&h=90" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=128%C3%9790&w=125&h=90" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=128%C3%9790&w=125&h=90" alt=""></a>
+                            </li>
+
+                        </ul>
+                        <p><strong>Descriptions</strong></p>
+                        <div class="description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed dot eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="comments">
+                            <div class="comment_add">
+                                <div class = "row">
+                                    <div class="col-xs-12 form-group">
+                                        <strong>User Reviews</strong>
+                                    </div> 
+                                    <div class="col-xs-12 col-sm-10 col-md-9 form-group">
+                                        <img src="http://placehold.it/80x79" alt=""/>
+                                        <div id="account_choose">
+                                            <a href="#"><i class="fa fa-caret-down fa-2x"></i></a>
+                                        </div>
+                                        <div style="overflow: hidden">
+                                            <textarea class="form-control" placeholder="Share your comment ..."></textarea>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <p>
+                                            <span id="login_name" class="username">Laurel</span>
+                                        </p>
+                                        <div id="comment_list_acc" class="col-xs-12">
+                                            <p>Comment as</p>
+                                            <ul class="list-inline" id = "acc_choose">
+                                                <li><a href="#1">*ABC1</a></li>
+                                                <li><a href="#2">*ABC2</a></li>
+                                                <li><a href="#3">*ABC3</a></li>
+                                                <li><a href="#2">*ABC2</a></li>
+                                                <li><a href="#3">*ABC3</a></li>
+                                                <li><a href="#2">*ABC2</a></li>
+                                                <li><a href="#3">*ABC3</a></li>
+                                                <li><a href="#2">*ABC2</a></li>
+                                                <li><a href="#3">*ABC3</a></li>
+                                                <li><a href="#3">*ABC3</a></li>
+                                                <li><a href="#3">*ABC3</a></li>
+                                                <li><a href="#3">*ABC3</a></li>
+                                                <li><a href="#3">*ABC3</a></li>
+                                                <li><a href="#3">*ABC3</a></li>
+                                                <li><a href="#3">*ABC3</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-2 col-md-3">
+                                        <button class="btn btn-default btn-lg btn-block" id="btn-share">
+                                            <span>
+                                                <i class="fa fa-share fa-fw">
+                                                    Share
+                                                </i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>   
+                            </div>
+                            <p>
+                                <b>
+                                    <i>Latest comments</i>
+                                </b>
+                            </p>
+                            <div class="comment_list">
+                                <div class ="row">
+                                    <div class ="col-xs-12">
+                                        <img src="http://placehold.it/75x71" alt=""/>
+                                        <div class="comment">
+                                            <p>
+                                                <a href="#" class="username">Thea</a>
+                                                <small class ="pull-right">3 minutes</small>
+                                            </p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ipsum lacus, blandit sit amet arcu hendrerit, 
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class ="row">
+                                    <div class ="col-xs-12">
+                                        <img src="http://placehold.it/75x71" alt=""/>
+                                        <div class="comment">
+                                            <p>
+                                                <a href="#" class="username">Thea</a>
+                                                <small class ="pull-right">3 minutes</small>
+                                            </p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ipsum lacus, blandit sit amet arcu hendrerit, 
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class ="row">
+                                    <div class ="col-xs-12">
+                                        <img src="http://placehold.it/75x71" alt=""/>
+                                        <div class="comment">
+                                            <p>
+                                                <a href="#" class="username">Thea</a>
+                                                <small class ="pull-right">3 minutes</small>
+                                            </p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ipsum lacus, blandit sit amet arcu hendrerit, 
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="btn_load" class="btn btn-default btn-lg col-xs-12">
+                                <span><i class="fa fa-spinner fa-fw"></i>Load more comments</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
+
+
             </div>
+        </div>
+        <div id="footer" class="mm-fixed-bottom">
+            <ul id="tab_footer" class="list-inline">
+                <li><a href="javascript:void(0)"><i class="home">Home</i></a></li>
+                <li><a href="javascript:void(0)"><i class="follow">Follow</i></a></li>
+                <li><a href="javascript:void(0)"><i class="video">Video</i></a></li>
+                <li><a href="javascript:void(0)"><i class="company">Company</i></a></li>
+                <li><a href="javascript:void(0)"><i class="share">Share</i></a></li>
+            </ul>
 
         </div>
+        <div id="video" class="row">
+            <ul id="list_video" class="col-xs-8 col-xs-offset-2 list-inline">
+                <li>
+                    <iframe width="270" height="175" src="https://www.youtube.com/embed/uWR1t1RynpY" frameborder="0" allowfullscreen></iframe>
+                </li>
+                <li>
+                    <iframe width="270" height="175" src="https://www.youtube.com/embed/uWR1t1RynpY" frameborder="0" allowfullscreen></iframe>
+                </li>
+                <li>
+                    <iframe width="270" height="175" src="https://www.youtube.com/embed/uWR1t1RynpY" frameborder="0" allowfullscreen></iframe>
+                </li>
+                <li>
+                    <iframe width="270" height="175" src="https://www.youtube.com/embed/uWR1t1RynpY" frameborder="0" allowfullscreen></iframe>
+                </li>
+            </ul>
+
+        </div>
+        <div class="col-xs-8 col-xs-offset-2 list-inline" id="company">
+            Company info
+        </div>
+        <ul id="social_links" class="list-inline">
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+            <li>d</li>
+        </ul>
+        <div id="follow_mess" >
+            You have followed this app
+        </div>
+        <div id="fullscreen_slider">
+            fgfgf
+        </div>
+
     </body>
 
 </html>

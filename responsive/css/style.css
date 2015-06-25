@@ -1,0 +1,86 @@
+.comment_add img {
+    float: left;
+}
+
+.comment_add textarea {
+    float: left;
+    height: 80px;
+    padding: 6px 12px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.comment_add .fa-caret-down {
+    float: left;
+    margin: 30px 5px;
+}
+#account_choose {
+    float: left;
+}
+#btn-share {
+    height: 80px;
+}
+
+.comment_list .comment {
+    float: right;
+    width: 83%;
+   
+}
+
+.comment_list img {
+   float:left;
+}
+
+#comment_list_acc {
+    display: none;
+}
+
+#list_image li {
+    list-style-type: none;
+}
+
+#list_image li a > img{
+    margin-bottom: 10px;
+}
+
+#tab_footer {
+    list-style-type: none;
+}
+
+#video {
+    display: none;
+    margin-top: 15px;
+}
+
+#company
+{
+    display: none;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+#social_links
+{
+    display: none;
+    list-style-type: none;
+}
+
+#follow_mess
+{
+    display: none;
+}
+
+#video li {
+    height: 170px;
+    width: 275px;
+}
+
+#footer {
+    bottom: 0;
+    position: fixed;
+}
+
+#fullscreen_slider {
+    display: none;
+    background-color: red;
+}
