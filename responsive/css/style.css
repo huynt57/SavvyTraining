@@ -24,11 +24,11 @@
 .comment_list .comment {
     float: right;
     width: 83%;
-   
+
 }
 
 .comment_list img {
-   float:left;
+    float:left;
 }
 
 #comment_list_acc {
@@ -83,4 +83,68 @@
 #fullscreen_slider {
     display: none;
     background-color: red;
+    z-index: 9999;
+    bottom:0;
+    margin: 0;
+    position: absolute;
+    visibility: visible;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+#fullscreen_slider img {
+    background: rgba(255, 0, 0, 1);
+
+}
+
+.swipe {
+    overflow: hidden;
+    visibility: hidden;
+    position: relative;
+}
+.swipe-wrap {
+    overflow: hidden;
+    position: relative;
+}
+.swipe-wrap > div {
+    float:left;
+    width:100%;
+    position: relative;
+}
+
+.swipe-wrap > div > img {
+    height: 100%;
+    width: 500px;
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+
+}
+
+.icon 
+{
+    max-height: 20px;
+    max-width: 20px;
+    margin-right: 5px;
+}
+
+#login_name
+{
+    font-weight: bold;
+    margin-left: 15px;
+    color: #2d5882;
+}
+
+#page
+{
+    position: relative;
+}
+
+#hide_slider 
+{
+    position: absolute;
+    z-index: 9999;
+    width: 60px;
 }

@@ -77,7 +77,10 @@ $(document).ready(function() {
                 break;
             case 'video':
                 $('#content').fadeOut(500, function() {
-                    removeOldContent();
+                    $('#home').hide();
+                    $('#company').hide();
+                    $('#social_links').hide();
+                    $('#follow_mess').hide();
                     $('#video').fadeIn(500);
                 });
                 break;
@@ -112,11 +115,31 @@ $(document).ready(function() {
         $('#home').hide();
         $('#company').hide();
     }
-    
+
+    //$('#page').height($(window).height());
+
     $('#list_image > li > a > img').click(function() {
-       //$(this).height(100).width(100);
-       $('fullscreen_slider').show().height($(window).height()).width($(window).height());;
-       
+        //$(this).height(100).width(100);
+//        var i
+//        for (i = 0; i < 8; i++) {
+//            $('#wrapper_swipe').append('<div><img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=128%C3%9790&w=125&h=90" alt="" /></div>');
+//            //$('#wrapper_swipe').append('<div>' + i + '</div>');
+//        }
+        var viewportHeight;
+        var viewportWidth;
+        if (document.compatMode === 'BackCompat') {
+            viewportHeight = document.body.clientHeight;
+            viewportWidth = document.body.clientWidth;
+        } else {
+            viewportHeight = document.documentElement.clientHeight;
+            viewportWidth = document.documentElement.clientWidth;
+        }
+        $('#fullscreen_slider').show().height(viewportHeight).width($(window).width());
+        window.mySwipe = Swipe(document.getElementById('fullscreen_slider'));
+        //  $('#fullscreen_slider').show().height(2000).width(2000);
+        //alert('h');
+        //   window.mySwipe = Swipe(document.getElementById('fullscreen_slider'));
+        ///  $('#fullscreen_slider').show();
     });
 });
 

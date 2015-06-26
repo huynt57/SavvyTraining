@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
     <head>
         <title>Responsive</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
         <script type = "text/javascript" src="../js/swipe.js"></script>
         <script type="text/javascript" src="../js/jquery.mmenu.min.all.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <script type = "text/javascript" src="../js/custom.js"></script> 
+
 
         <script type="text/javascript">
             $(document).ready(function() {
@@ -33,22 +33,14 @@
 
     <body>
         <nav id="menu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About us</a>
-                    <ul>
-                        <li><a href="#about/history">History</a></li>
-                        <li><a href="#about/team">The team</a>
-                            <ul>
-                                <li><a href="#about/team/management">Management</a></li>
-                                <li><a href="#about/team/sales">Sales</a></li>
-                                <li><a href="#about/team/development">Development</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#about/address">Our address</a></li>
-                    </ul>
-                </li>
-                <li><a href="#contact">Contact</a></li>
+            <ul id="list_icon">
+                <li><a href="#about/history"> <img class="icon" src="../img/icons/nav_home.png" alt=""/>Home</a></li>
+                <li><a href="#about/team"><img class="icon" src="../img/icons/nav_home.png" alt=""/>Update info</a></li>
+                <li><a href="#about/address"><img class="icon" src="../img/icons/nav_home.png" alt=""/>Companies</a></li>
+                <li><a href="#about/history"><img class="icon" src="../img/icons/nav_home.png" alt=""/>How are we doing ?</a></li>
+                <li><a href="#about/team"><img class="icon" src="../img/icons/nav_home.png" alt=""/>Setting</a></li>
+                <li><a href="#about/address"><img class="icon" src="../img/icons/nav_home.png" alt=""/>Logout</a></li>              
+                <li><a href="#contact"><img class="icon" src="../img/icons/nav_home.png" alt=""/>Contact</a></li>
             </ul>
         </nav>
         <div id="page">
@@ -110,7 +102,7 @@
                                     <div class="col-xs-12 col-sm-10 col-md-9 form-group">
                                         <img src="http://placehold.it/80x79" alt=""/>
                                         <div id="account_choose">
-                                            <a href="#"><i class="fa fa-caret-down fa-2x"></i></a>
+                                            <a href="#"><i class="fa fa-caret-down fa-2x" style="margin-right: 30px;"></i></a>
                                         </div>
                                         <div style="overflow: hidden">
                                             <textarea class="form-control" placeholder="Share your comment ..."></textarea>
@@ -252,10 +244,25 @@
         <div id="follow_mess" >
             You have followed this app
         </div>
-        <div id="fullscreen_slider">
-            fgfgf
+        <div id="fullscreen_slider" class="swipe">
+            <div class='swipe-wrap' id="wrapper_swipe">
+                <div>
+                    <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97800&w=400&h=800" alt="">
+                </div>
+                <div>
+                    <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97800&w=400&h=800" alt="">
+                </div>
+                <div>
+                    <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97800&w=400&h=800" alt="">
+                </div>
+
+            </div>
+            <a class="slider_left_btn" href="javascript:void(0)"><i class="fa fa-angle-left"></i></a>
+            <a class="slider_right_btn" href="javascript:void(0)"><i class="fa fa-angle-right"></i></a>
+            <button id="hide_slider" style="height: 100px; width: 100px">Button</button>
         </div>
 
+        <script type = "text/javascript" src="../js/custom.js"></script> 
     </body>
 
 </html>
