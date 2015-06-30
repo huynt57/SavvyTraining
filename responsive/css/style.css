@@ -82,22 +82,22 @@
 
 #fullscreen_slider {
     display: none;
-    background-color: red;
     z-index: 9999;
-    bottom:0;
+    top: 0;
+    bottom: 0;
     margin: 0;
     position: absolute;
     visibility: visible;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.4);
-    overflow: hidden;
+    background: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
 }
 
 #fullscreen_slider img {
-    background: rgba(255, 0, 0, 1);
-
+    background: rgba(0, 0, 0, 0);
 }
+
 
 .swipe {
     overflow: hidden;
@@ -145,6 +145,57 @@
 #hide_slider 
 {
     position: absolute;
-    z-index: 9999;
-    width: 60px;
+    top: 0;
+    right: 0;
+    padding-top: 25px;
+    padding-right: 25px;
+
+}
+
+#prev 
+{
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    padding-left: 20px;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 50px;
+    left: 0;
+}
+
+#next
+{
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    padding-right: 20px;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 50px;
+    right: 0;
+}
+
+#info 
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 25px;
+    padding-right: 25px;
+
+}
+
+#info_toggle 
+{
+    position: absolute;
+    display: none;
+    border-radius: 3px;
+    
+    bottom: 50px;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.65);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    left: 20px;
+    right: 20px;
 }
