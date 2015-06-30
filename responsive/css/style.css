@@ -189,7 +189,7 @@
     position: absolute;
     display: none;
     border-radius: 3px;
-    
+
     bottom: 50px;
     font-size: 20px;
     background: rgba(255, 255, 255, 0.65);
@@ -198,4 +198,147 @@
     padding-left: 20px;
     left: 20px;
     right: 20px;
+}
+
+.home {
+    background: url("../img/icons/footer_home.png") no-repeat scroll center 0 rgba(0, 0, 0, 0);
+    background-size: 100% auto;
+    display: block;
+    height: 30px;
+    margin: 10px auto;
+    width: 30px;
+}
+
+.home {
+    background: url("../img/icons/footer_home.png") no-repeat scroll center 0 rgba(0, 0, 0, 0);
+    background-size: 100% auto;
+    display: block;
+    height: 30px;
+    margin: 10px auto;
+    width: 30px;
+}
+
+
+.company {
+    background: url("../img/icons/footer_company.png") no-repeat scroll center 0 rgba(0, 0, 0, 0);
+    background-size: 100% auto;
+    display: block;
+    height: 30px;
+    margin: 10px auto;
+    width: 30px;
+}
+
+
+.follow {
+    background: url("../img/icons/footer_follow.png") no-repeat scroll center 0 rgba(0, 0, 0, 0);
+    background-size: 100% auto;
+    display: block;
+    height: 30px;
+    margin: 10px auto;
+    width: 30px;
+}
+
+
+.video {
+    background: url("../img/icons/footer_video.png") no-repeat scroll center 0 rgba(0, 0, 0, 0);
+    background-size: 100% auto;
+    display: block;
+    height: 30px;
+    margin: 10px auto;
+    width: 30px;
+}
+
+.share {
+    background: url("../img/icons/footer_share.png") no-repeat scroll center 0 rgba(0, 0, 0, 0);
+    background-size: 100% auto;
+    display: block;
+    height: 30px;
+    margin: 10px auto;
+    width: 30px;
+}
+
+
+#tab_footer > li {
+    background: none repeat scroll 0 0 #383A3D;
+    border-right: 1px solid #000000;
+    box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.12) inset;
+    display: block;
+    float: left;
+    height: 100%;
+    max-width: 100px;
+    min-width: 40px;
+    width: 20%;
+    background: #424346;
+    background: -moz-linear-gradient(top, #424346 0%, #303135 56%, #27282c 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#424346), color-stop(56%,#303135), color-stop(100%,#27282c));
+    background: -webkit-linear-gradient(top, #424346 0%,#303135 56%,#27282c 100%);
+    background: -o-linear-gradient(top, #424346 0%,#303135 56%,#27282c 100%);
+    background: -ms-linear-gradient(top, #424346 0%,#303135 56%,#27282c 100%);
+    background: linear-gradient(to bottom, #424346 0%,#303135 56%,#27282c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424346', endColorstr='#27282c',GradientType=0 );
+}
+
+#footer {
+    background: none repeat scroll 0 0 #383A3D;
+    color: #ADAEAF;
+    font-size: 16px;
+    font-weight: bold;
+    height: 50px;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    overflow: visible;
+}
+
+#tab_footer > li.selected {
+    background: none repeat scroll 0 0 #2B5A83;
+    box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.3) inset;
+    background: #316596;
+    background: -moz-linear-gradient(top, #316596 0%, #2b5b83 55%, #2b5b83 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#316596), color-stop(55%,#2b5b83), color-stop(100%,#2b5b83));
+    background: -webkit-linear-gradient(top, #316596 0%,#2b5b83 55%,#2b5b83 100%);
+    background: -o-linear-gradient(top, #316596 0%,#2b5b83 55%,#2b5b83 100%);
+    background: -ms-linear-gradient(top, #316596 0%,#2b5b83 55%,#2b5b83 100%);
+    background: linear-gradient(to bottom, #316596 0%,#2b5b83 55%,#2b5b83 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#316596', endColorstr='#2b5b83',GradientType=0 );
+}
+
+.popup {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.65);
+  bottom: -500px;
+  color: #FFFFFF;
+  display: none;
+  left: 0;
+  margin: 0;
+  min-height: 50px;
+  overflow: hidden;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 3;
+  text-align: center;
+  font-size: 20px;
+}
+
+.popup > li {
+  display: block;
+  float: left;
+  margin: 5px;
+  height: 64px;
+  width: 64px;
+}
+
+.fb_icon {
+  background: url("../img/icons/facebook.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5) inset;
+  display: block;
+  height: 60px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 60px;
 }

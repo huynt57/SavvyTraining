@@ -92,7 +92,10 @@ $(document).ready(function() {
                 break;
             case 'company':
                 $('#content').fadeOut(500, function() {
-                    removeOldContent();
+                    $('#home').hide();
+                    $('#video').hide();
+                    $('#social_links').hide();
+                    $('#follow_mess').hide();
                     $('#company').fadeIn(500);
                 });
                 break;
@@ -159,11 +162,11 @@ $(document).ready(function() {
         });
     });
 
-    $('#tab_footer > li > a > i').click(function() {
+    $('#tab_footer > li').click(function() {
 //        var tab_name = $(this).attr('tab_name');
 //        alert(tab_name);
 
-        $("#tab_footer").find('i').removeClass('selected');
+        $("#tab_footer").find('li').removeClass('selected');
         $(this).addClass('selected');
     });
 
